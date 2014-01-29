@@ -1,0 +1,8 @@
+---
+- name: add zabbix.com key
+  apt_key: url=http://repo.zabbix.com/zabbix-official-repo.key state=present
+  when: zabbix_common_config_repo == 'zabbix.com'
+
+- name: add zabbix.com repo
+  apt_repository: repo='deb http://repo.zabbix.com/zabbix/{{ zabbix_common_config_minor_version }}/{{ ansible_distribution|lower }} {{ ansible_lsb.codename }} main contrib non-free' state=present
+  when: zabbix_common_config_repo == 'zabbix.com'
