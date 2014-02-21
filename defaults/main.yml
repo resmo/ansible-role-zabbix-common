@@ -1,3 +1,4 @@
 ---
 # zabbix version
 zabbix_common_config_minor_version: '2.2'
+zabbix_common_environment: ""
