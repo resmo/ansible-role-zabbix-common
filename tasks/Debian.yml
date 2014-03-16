@@ -1,4 +1,5 @@
 ---
+#TODO: this may not be needed in the future of apt_repository
 - name: ensure pycurl is installed 
   apt: name=python-pycurl state=installed
   environment: zabbix_common_environment
@@ -9,10 +10,4 @@
 
 - name: add zabbix.com repo
   apt_repository: repo='deb http://repo.zabbix.com/zabbix/{{ zabbix_common_config_minor_version }}/{{ ansible_distribution|lower }} {{ ansible_lsb.codename }} main contrib non-free' state=present
-  register: repo
-  environment: zabbix_common_environment
-
-- name: ensure apt cache is up to date
-  apt: update_cache=yes
-  when: repo.changed
   environment: zabbix_common_environment
