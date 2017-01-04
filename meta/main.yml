@@ -4,7 +4,7 @@ galaxy_info:
   description: Zabbix common role
   company: Moser Systems
   license: MIT
-  min_ansible_version: 1.6
+  min_ansible_version: 1.4
   platforms:
   - name: EL
     versions:
@@ -13,12 +13,6 @@ galaxy_info:
     - 7
   - name: Fedora
     versions:
-    - 18
-    - 19
-    - 20
-    - 21
-    - 22
-    - 23
     - 24
     - 25
   - name: Ubuntu
